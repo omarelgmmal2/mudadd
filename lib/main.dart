@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mudad/payment/view.dart';
+import 'auth/login/view.dart';
+import 'core/logic/helper_methods.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,10 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "Mudad",
       debugShowCheckedModeBanner: false,
-      home: PaymentView(),
+      navigatorKey: navigatorKey,
+      home: const LoginScreen(),
     );
   }
 }
