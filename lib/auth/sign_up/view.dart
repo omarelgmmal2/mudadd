@@ -14,7 +14,7 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final formKey = GlobalKey<FormState>();
-  final emailController = TextEditingController();
+  final phoneController = TextEditingController();
   final fullNameController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
@@ -101,7 +101,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               AppInputPhone(
                 labelText: "Phone",
                 isPhone: true,
-                controller: emailController,
+                controller: phoneController,
                 paddingBottom: 30,
                 validator: (value) {
                   if (value!.isEmpty) {

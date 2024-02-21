@@ -15,7 +15,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final formKey = GlobalKey<FormState>();
-  final emailController = TextEditingController();
+  final phoneController = TextEditingController();
   final passwordController = TextEditingController();
 
   @override
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   AppInputPhone(
                     labelText: "Phone",
                     isPhone: true,
-                    controller: emailController,
+                    controller: phoneController,
                     paddingBottom: 30,
                     validator: (value) {
                       if (value!.isEmpty) {
