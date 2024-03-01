@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mudad/core/design/custom_image.dart';
 import '../../core/design/app_button.dart';
 import '../../core/design/app_input_email.dart';
-import '../../core/design/app_input_password.dart';
 import '../../core/logic/helper_methods.dart';
 import '../sign_up/view.dart';
 
@@ -61,70 +60,45 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 30,
             ),
+            const Text(
+              "Phone",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+            const SizedBox(
+              height: 13,
+            ),
             Form(
               key: formKey,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    "Phone",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 13,
-                  ),
-                  AppInputPhone(
-                    labelText: "Phone",
-                    isPhone: true,
-                    controller: phoneController,
-                    paddingBottom: 30,
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return "رقم الهاتف مطلوب";
-                      } else if (value.length < 11) {
-                        return "يجب ان يكون رقم الهاتف 11 رقم";
-                      }
-                      return null;
-                    },
-                  ),
-                  const Text(
-                    "Password",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 13,
-                  ),
-                  AppInputPassword(
-                    labelText: "Password",
-                    isPassword: true,
-                    controller: passwordController,
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return "كلمه المرور مطلوبه";
-                      } else if (value.length < 8) {
-                        return "كلمه المرور ضعيفه";
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              child: AppInputPhone(
+                labelText: "Phone",
+                isPhone: true,
+                controller: phoneController,
+                paddingBottom: 30,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "رقم الهاتف مطلوب";
+                  } else if (value.length < 11) {
+                    return "يجب ان يكون رقم الهاتف 11 رقم";
+                  }
+                  return null;
+                },
               ),
             ),
             const SizedBox(
               height: 16,
             ),
-            TextButton(
-              onPressed: () {},
-              child: const Align(
-                alignment: Alignment.topRight,
-                child: Text(
-                  "Forget Password!",
+            GestureDetector(
+              onTap: () {
+                toGetNavigate(const SignUpScreen(),);
+              },
+              child: const Text(
+                textAlign: TextAlign.end,
+                "Create an account!",
+                style: TextStyle(
+                  color: Colors.blue,
                 ),
               ),
             ),

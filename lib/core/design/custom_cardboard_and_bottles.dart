@@ -60,7 +60,7 @@ class CustomCardBoardAndBottles extends StatelessWidget {
                           height: 10,
                         ),
                         Text(
-                          "10 كرتونه",
+                           "كرتونه 10",
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
@@ -93,7 +93,7 @@ class CustomCardBoardAndBottles extends StatelessWidget {
                         height: 5,
                       ),
                       const Text(
-                          "عبوه330مx20 ",
+                        "330مx20عبوه",
                         style: TextStyle(
                           fontSize: 17,
                           fontWeight: FontWeight.w600,

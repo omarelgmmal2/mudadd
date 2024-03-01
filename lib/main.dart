@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'auth/login/view.dart';
+import 'package:mudad/payment/view.dart';
 import 'core/logic/helper_methods.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: "Mudad",
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
-      home: const LoginScreen(),
+      home: const PaymentView(),
     );
   }
 }
