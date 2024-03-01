@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'auth/confirm_code/view.dart';
+import 'package:mudad/auth/login/view.dart';
 import 'core/logic/helper_methods.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: "Mudad",
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
-      home: const ConfirmCodeView(),
+      home: const LoginScreen(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mudad/auth/forget_password/view.dart';
 import 'package:mudad/core/design/custom_image.dart';
 import '../../core/design/app_button.dart';
 import '../../core/design/app_input_email.dart';
@@ -92,11 +93,11 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             GestureDetector(
               onTap: () {
-                toGetNavigate(const SignUpScreen(),);
+                toGetNavigate(const ForgetPassword(),);
               },
               child: const Text(
                 textAlign: TextAlign.end,
-                "Create an account!",
+                "Forget Password!",
                 style: TextStyle(
                   color: Colors.blue,
                 ),
